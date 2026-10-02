@@ -3,7 +3,8 @@
 use App\Http\Controllers\SubscriptionPackagesController;
 use App\Http\Controllers\BookCategoryController;
 use App\Http\Controllers\UserController;
-use App\Models\SubscriptionPackage; // 1. Tambahkan Import Model Ini
+use App\Http\Controllers\BookController;
+use App\Models\SubscriptionPackage;
 use Illuminate\Support\Facades\Route;
 
 // 2. Ubah Route '/' untuk mengambil data dari database
@@ -44,5 +45,6 @@ Route::middleware(['IsLoggedIn'])->group(function () {
 
         Route::resource('book-categories', BookCategoryController::class);
         Route::resource('subscription-packages', SubscriptionPackagesController::class);
+        Route::resource('books', BookController::class);
     });
 });

@@ -31,7 +31,8 @@
                             request()->routeIs('admin.subscription-packages.index') ? 'active' : ''}}">Paket Langganan</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">Buku</a>
+                        <a href="{{ route('admin.books.index')}}" class="nav-link{{
+                        request()->routeIs('admin.books.index') ? 'active' : ''}}">Buku</a>
                     </li>
                 @else
                     {{-- Menu Khusus Guest / User Biasa --}}
